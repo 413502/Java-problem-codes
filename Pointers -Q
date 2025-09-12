@@ -54,6 +54,21 @@ System.out.println();
 }
 }
 
+
+//inverted half pyramid 
+ {
+   ...>     for(int i=1;i<=4;i++){
+   ...>         for(int j=4;j>=i;j--){
+   ...>             System.out.print(i);
+   ...>         }
+   ...>         System.out.println();
+   ...>     }
+   ...> }
+1111
+222
+33
+4
+
 5. Half pyramid - rotated by 90 degrees
  {  //Outer Loop
    ...>     for(int i =1; i<=4;i++){
@@ -95,7 +110,6 @@ Output:
 
 7. Butterfly pattern
 { int n=5,i=1;
-   ...>   //int spaces = 2*( n-i);
    ...>     for(i =1;i<=5;i++){
    ...>     for(int j=1;j<=i; j++){
    ...>
@@ -106,7 +120,7 @@ Output:
    ...>     System.out.print(" ");
    ...>
    ...>     }
-   ...>     //2nd part
+   ...>    
    ...>     for(int j=1;j<=i;j++){
    ...>         System.out.print("*");
    ...>     }
@@ -135,3 +149,199 @@ Output:
 ***    ***
 **      **
 *        *
+
+9. Solid Rhombus
+ {
+   ...>     for(int i=1;i<=5;i++){
+   ...>         for(int j=1;j<=5-i;j++){
+   ...>              System.out.print(" ");
+   ...>         }
+   ...>         //stars
+   ...>         for(int j=1;j<=5;j++){
+   ...>              System.out.print("*");
+   ...>         }
+   ...>          System.out.println();
+   ...>     }
+   ...> }
+   ...>
+    *****
+   *****
+  *****
+ *****
+*****
+
+// Empty rhombus 
+
+{
+   ...>     for(int i=1;i<=5;i++){
+   ...>         for(int j=1;j<=5-i;j++){
+   ...>             System.out.print(" ");
+   ...>         }
+   ...>         for(int j=1;j<=5;j++){
+   ...>         if(i==1 || j==1 || i ==5 || j == 5){
+   ...>             System.out.print("*");}else{
+   ...>                 System.out.print(" ");
+   ...>             }
+   ...>         }
+   ...>
+   ...>
+   ...>          System.out.println();
+   ...> }
+   ...> }
+    *****
+   *   *
+  *   *
+ *   *
+*****
+
+10.Number Pyramid 
+ {
+   ...>      for(int i=1 ;i<=5;i++) {
+   ...>          for(int j=1;j<=5-i;j++){
+   ...>              System.out.print(" ");
+   ...>         }
+   ...>          for(int j=1;j<=i;j++){
+   ...>              System.out.print(i + " ");
+   ...>         }
+   ...>          System.out.println();
+   ...>     }
+   ...> }
+    1
+   2 2
+  3 3 3
+ 4 4 4 4
+5 5 5 5 5
+
+11. Palliandromic pattern 
+ for(int i=1 ;i<=5;i++) {
+   ...>     for(int j=1;j<=5-i;j++){
+   ...>         System.out.print(" ");
+   ...>     }
+   ...>
+   ...>     //First  Half numbers
+   ...>     for(int j=i;j>=1;j--){
+   ...>         System.out.print(j);
+   ...>     }
+   ...>
+   ...>     //2nd Half
+   ...>     for(int j=2;j<=i;j++){
+   ...>          System.out.print(j);
+   ...> }
+   ...>      System.out.println();}
+    1
+   212
+  32123
+ 4321234
+543212345
+
+12. Diamond Pattern
+ {        //Upper Half
+   ...>     for(int i=1;i<=4;i++){
+   ...>         for(int j=1;j<=4-i;j++){
+   ...>             System.out.print(" ");
+   ...>         }
+   ...>
+   ...>        // stars
+   ...>     for(int j=1;j<=2*i-1; j++){
+   ...>             System.out.print("*");
+   ...>         }
+   ...>        System.out.println();
+   ...>     }
+   ...>     //Lower Half
+   ...>      for(int i=4;i>=1;i--){
+   ...>         for(int j=1;j<=4-i;j++){
+   ...>              System.out.print(" ");
+   ...>         }
+   ...>      //stars
+   ...>          for(int j=1;j<=2*i-1; j++){
+   ...>              System.out.print("*");
+   ...>         }
+   ...>          System.out.println();
+   ...>     }
+   ...> }
+   *
+  ***
+ *****
+*******
+*******
+ *****
+  ***
+   *
+
+
+//Empty Butterfly
+class Main {
+    public static void main(String[] args) {
+     
+        int n = 5;
+
+        // Upper half
+        for (int i = 1; i <= n; i++) {
+            // Left wing
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            // Middle spaces
+            int spaces = 2 * (n - i);
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+
+            // Right wing
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+
+        // Lower half
+        for (int i = n; i >= 1; i--) {
+            // Left wing
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            // Middle spaces
+            int spaces = 2 * (n - i);
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+
+            // Right wing
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+
+//Print pascals triangle
+Print Pascal’s Triangle.
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+
+Print hollow butterfly
