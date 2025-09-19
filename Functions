@@ -1,0 +1,25 @@
+1. Write function to find sum of odd numbers from 1 to n.
+Import java.util.*; 
+public class Functions{
+   ...>     public static void sumofOdd(int n){
+   ...>         int sum = 0;
+   ...>         for(int i =0;i<=n;i++){
+   ...>             if  (i % 2 != 0)
+   ...>             sum = sum + i;
+   ...>         }
+   ...>         System.out.println(sum);
+   ...>     }
+   ...>     public static void main(String [] args){
+   ...>         Scanner  sc = new Scanner(System.in);
+   ...>         int n = sc.nextInt();
+   ...>
+   ...>         sumofOdd(n);
+    }
+ }
+|  Output:
+
+jshell> Functions.sumofOdd(8);
+16
+
+jshell> Functions.sumofOdd(5);
+9
