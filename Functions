@@ -23,3 +23,173 @@ jshell> Functions.sumofOdd(8);
 
 jshell> Functions.sumofOdd(5);
 9
+
+
+//Write a function to find GCD of two numbers.
+
+jshell> public class Functions{
+   ...>     public static int gcdOfTwo(int m , int n){
+   ...>         while(m != n){
+   ...>             if(m >n)
+   ...>             m = m-n;
+   ...>             else
+   ...>             n = n-m;
+   ...>         }
+   ...>         return m;
+   ...>     }
+   ...>     public static void main(String []args){
+   ...>         Scanner sc = new Scanner(System.in);
+   ...>         int m = sc.nextInt();
+   ...>         int n = sc.nextInt();
+   ...>
+   ...>         System.out.println(gcdOfTwo(m,n));
+   ...>     }
+   ...> }
+Output:
+|  modified class Functions
+
+jshell> Functions.gcdOfTwo(2,5);
+
+//Fibonacci series upto n terms
+ public class Functions{
+   ...>     public static void fiboSeries(int n){
+   ...>         int a =0, b = 1, c;
+   ...>
+   ...>     System.out.print( a +","+b);
+   ...>
+   ...>        for(int i = 0 ;i <n-2; i++){
+   ...>             c = a +b;
+   ...>             a=b;
+   ...>             b=c;
+   ...> System.out.print("," + c);        }
+   ...>
+   ...>
+   ...>         }
+   ...>     public static void main(String []args){
+   ...>         Scanner sc = new Scanner(System.in);
+   ...>         int n = sc.nextInt();
+   ...>
+   ...>        fiboSeries(n);
+   ...>     }
+   ...> }
+Output:
+|  modified class Functions
+
+jshell>  Functions. fiboSeries(5);
+0,1,1,2,3
+$5 ==> 1
+
+jshell> Functions.gcdOfTwo(2,2);
+$6 ==> 2
+
+
+Q.Write a program to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros entered. :
+Code:
+public class NumberCounter{
+        public static void countNumbers(){
+            Scanner sc = new Scanner(System.in);
+            int positive  = 0, negative = 0, zero = 0;
+           char choice;
+   ...>
+            do{
+                System.out.print("Enter a number: ");
+                int num = sc.nextInt();
+   
+                if(num > 0) positive++;
+                else if(num < 0) negative++;
+                else zero++;
+   
+   ...>             System.out.print("Do you  want to enter another number?(
+y/n): ");
+   ...>             choice = sc.next().charAt(0);
+   ...>         }
+            while(choice == 'y' || choice == 'Y');
+
+             System.out.println("Positive Numbers: "+ positive);
+ System.out.println("Negative Numbers: "+ negative);
+ System.out.println("Zeros: "+ zero);
+
+
+   ...>     }
+   ...>     public static void main(String []args){
+   ...>         countNumbers();  // call  the  function
+   ...>     }
+   ...> }
+|  Output: created class NumberCounter
+ NumberCounter.countNumbers();
+Enter a number: 6
+Do you  want to enter another number?(y/n): y
+Enter a number: 7
+Do you  want to enter another number?(y/n): y
+Enter a number: -2
+Do you  want to enter another number?(y/n): Y
+Enter a number: 0
+Do you  want to enter another number?(y/n): y
+Enter a number: -66
+Do you  want to enter another number?(y/n): y
+Enter a number: 67
+Do you  want to enter another number?(y/n): n
+Positive Numbers: 3
+Negative Numbers: 2
+Zeros: 1
+
+
+Method 2:
+public class NumberCounter{
+   ...>             public static void countNumbers(){
+   ...>                     Scanner sc = new Scanner(System.in);
+   ...>                     int positive  = 0, negative = 0, zero = 0;
+   ...>                     int choice;
+   ...>        //System.out.println("Enter 99 to exit");
+   ...>         while(true) {
+   ...>
+   ...>              System.out.print("Enter a number: ");
+   ...>                             int num = sc.nextInt();
+   ...>
+   ...>                             if(num > 0) positive++;
+   ...>              else if(num < 0) negative++;
+   ...>
+   ...>                            else zero++;
+   ...>
+   ...>              System.out.println("Positive Numbers: "+ positive);
+   ...>              System.out.println("Negative Numbers: "+ negative);
+   ...>              System.out.println("Zeros: "+ zero);
+   ...>
+   ...>
+   ...>                 System.out.println("Enter 99 to exit");
+   ...>          choice = sc.nextInt();
+   ...>                if (choice == 99) {
+   ...>         System.out.println("Existing...");
+   ...>         break;
+   ...>     }
+   ...> }
+   ...> }
+   ...>
+   ...>
+   ...>         public static void main(String []args) {
+   ...>             countNumbers();  // call  the  function
+   ...>
+   ...>     }
+   ...> }
+Output:
+|  created class NumberCounter
+ NumberCounter. countNumbers();
+
+Enter a number: -5
+Positive Numbers: 1
+Negative Numbers: 1
+Zeros: 0
+Enter 99 to exit
+6
+Enter a number: 55 0
+Positive Numbers: 2
+Negative Numbers: 1
+Zeros: 0
+Enter 99 to exit
+Enter a number: 99
+Positive Numbers: 3
+Negative Numbers: 1
+Zeros: 0
+Enter 99 to exit
+99
+Existing...
