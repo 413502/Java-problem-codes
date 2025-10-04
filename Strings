@@ -1,0 +1,22 @@
+Reverse a string using StringBuilder Class
+Code:
+ {
+   ...>     StringBuilder sb = new StringBuilder("HelloWorld");
+   ...>
+   ...>
+   ...>
+   ...>     for(int i = 0;i< sb.length()/2;i++){
+   ...>         int front = i;
+   ...>         int back = sb.length()-i-1;   // if front, i = 0 having h to be replace  then 10(length)-0-1=9 replaced with o. 
+   ...>
+   ...>
+   ...>         char frontChar = sb.charAt(front);
+   ...>         char backChar = sb.charAt(back);
+   ...>
+   ...>         sb.setCharAt(front,backChar);
+   ...>         sb.setCharAt(back,frontChar);
+   ...>
+   ...>     }
+   ...>     System.out.print(sb);
+   ...> }
+Output: dlroWolleH
