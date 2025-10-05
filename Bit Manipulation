@@ -1,0 +1,41 @@
+1.Update a bit ( to 1 or 0)
+code:
+ {
+   ...>
+   ...>
+   ...>     Scanner sc = new Scanner(System.in);
+   ...>     int n = sc.nextInt();
+   ...>
+   ...>     int pos =2;
+   ...>     int number= 0b0101,BitMask, NotBitMask, opr;
+   ...>     if (n==1) {
+    ...>         BitMask = 1<<pos;                     //set operation
+   ...>         opr = BitMask | number;
+   ...>         System.out.print(opr);
+   ...>     }
+   ...>     else {
+   ...>         BitMask = 1<<pos;                     //clear operation 
+   ...>         NotBitMask = ~(BitMask);
+   ...>         opr = NotBitMask & number;
+   ...>          System.out.print(opr);
+   ...>     }
+   ...> }
+Output :
+if 1 performs set operation and for 0 performs clear operation.
+
+2. Get Bit at a given position
+Code :
+
+ {
+   ...>     Scanner sc = new Scanner(System.in);
+   ...>     //int pos = sc.nextInt();
+   ...>     int number = 5;
+   ...>     int pos = 3;
+   ...>     int BitMask, opr;
+   ...>
+   ...>     BitMask = 1<<pos;
+   ...>     opr = BitMask & number;
+   ...>     System.out.print(opr);
+   } 
+Output:
+0
