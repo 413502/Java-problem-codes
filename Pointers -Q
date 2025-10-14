@@ -55,7 +55,7 @@ System.out.println();
 }
 
 
-//inverted half pyramid 
+5. inverted half pyramid 
  {
    ...>     for(int i=1;i<=4;i++){
    ...>         for(int j=4;j>=i;j--){
@@ -69,7 +69,7 @@ System.out.println();
 33
 4
 
-5.Rotated Half Pyramid (90° Counterclockwise) 
+6.Rotated Half Pyramid (90° Counterclockwise) 
 {
    ...>     for(int i =1; i<=4;i++){
    ...>
@@ -91,7 +91,7 @@ System.out.println();
  ***
 **** 
 
-6. 1-0 Triangle
+7. 1-0 Triangle
 
 {
    ...>
@@ -111,7 +111,7 @@ Output:
 0101
 10101
 
-Ex:each row starts with the row number and prints consecutive numbers.
+8. each row starts with the row number and prints consecutive numbers.
  { for(int i=1;i<=5;i++){
    ...>         int num =i;
    ...>             for(int j=1;j<=i;j++){
@@ -126,7 +126,10 @@ Ex:each row starts with the row number and prints consecutive numbers.
 3 4 5
 4 5 6 7
 5 6 7 8 9
- { int num = 1; for(int i=1;i<=5;i++){
+
+
+9. Print half pyramid  of consecutive numbers 
+{ int num = 1; for(int i=1;i<=5;i++){
    ...>
    ...>             for(int j=1;j<=i;j++){
    ...>             System.out.print(num + " ");
@@ -141,7 +144,7 @@ Ex:each row starts with the row number and prints consecutive numbers.
 7 8 9 10
 11 12 13 14 15
 
-Ex:
+10:
 {
    ...>
    ...>
@@ -162,7 +165,7 @@ A B C
 A B C D
 A B C D E
 
-Ex:
+11;
 > {
    ...>     Scanner sc = new Scanner(System.in);
    ...>     int n = sc.nextInt();
@@ -183,7 +186,7 @@ A B C D E
 
 
 
-Ex:
+12)
  {
    ...>     Scanner sc = new Scanner(System.in);
    ...>     int n = sc.nextInt();
@@ -202,7 +205,7 @@ C C C
 D D D D
 E E E E E
 
-Ex:
+* 13)
  {
    ...>     Scanner sc = new Scanner(System.in);
    ...>     int n = sc.nextInt();
@@ -235,7 +238,7 @@ Ex:
 ABCDEDCBA
 
 
-7. Butterfly pattern
+14) Butterfly pattern
 { int n=5,i=1;
    ...>     for(i =1;i<=5;i++){
    ...>     for(int j=1;j<=i; j++){
@@ -277,7 +280,7 @@ ABCDEDCBA
 **      **
 *        *
 
-Ex:
+15)
 {  int n =5;
    ...>     for(int i=1;i<=n;i++){
    ...>         for(int j=1;j<=i;j++){
@@ -304,7 +307,7 @@ Ex:
 1234554321c
 
 
-9. Solid Rhombus
+16. Solid Rhombus
  {
    ...>     for(int i=1;i<=5;i++){
    ...>         for(int j=1;j<=5-i;j++){
@@ -324,7 +327,7 @@ Ex:
  *****
 *****
 
-// Empty rhombus 
+17) Empty rhombus 
 
 {
    ...>     for(int i=1;i<=5;i++){
@@ -348,7 +351,7 @@ Ex:
  *   *
 *****
 
-10.Number Pyramid 
+18)Number Pyramid 
  {
    ...>      for(int i=1 ;i<=5;i++) {
    ...>          for(int j=1;j<=5-i;j++){
@@ -366,7 +369,7 @@ Ex:
  4 4 4 4
 5 5 5 5 5
 
-11. Palliandromic pattern 
+19) Palliandromic pattern 
  for(int i=1 ;i<=5;i++) {
    ...>     for(int j=1;j<=5-i;j++){
    ...>         System.out.print(" ");
@@ -388,7 +391,7 @@ Ex:
  4321234
 543212345
 
-12. Diamond Pattern
+20) Diamond Pattern
  {        //Upper Half
    ...>     for(int i=1;i<=4;i++){
    ...>         for(int j=1;j<=4-i;j++){
@@ -422,7 +425,7 @@ Ex:
   ***
    *
 
-Ex: {
+21) {
    ...>     int n=5;
    ...>     for(int i=0;i<n;i++){
    ...>         for(int j=1;j<=n-i;j++){
@@ -462,7 +465,7 @@ Output:
 ****  ****
 **********
 
-13. //Empty Butterfly
+22) //Empty Butterfly
 class Main {
     public static void main(String[] args) {
      
@@ -529,7 +532,7 @@ class Main {
 }
 
 
-14 //Print pascals triangle
+23) Print pascals triangle
 Print Pascal’s Triangle.
     1
    1 1
@@ -537,7 +540,7 @@ Print Pascal’s Triangle.
  1 3 3 1
 1 4 6 4 1
 
-//Inverted odd pyramid 
+24)Inverted odd pyramid 
 
  {  int n=5;
    ...>     for(i=0;i<n;i++){
