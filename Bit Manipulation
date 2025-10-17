@@ -39,3 +39,84 @@ Code :
    } 
 Output:
 0
+
+Q.3 Write a program to count the number of 1’s in a binary representation of the number.
+
+Code:
+ public class counts{
+   ...>     public static void main ( String[]args){
+   ...>         Scanner sc = new Scanner(System.in);
+  
+   ...>          int n =sc.nextInt();
+   ...>     int num=n;
+   ...>         int count = countOnes(n);
+   ...>
+   ...>         System.out.print("Number of ones in binary representation :"+ count);
+   ...>
+   ...>     }
+   ...>
+   ...>     public  static int countOnes(int num) {
+   ...>         int count =0;
+   ...>    while(num != 0) {     count +=num & 1;
+   ...>       num =  num >> 1;
+   ...> }
+   ...>
+   ...>     return count;}
+   ...> }
+|  modified class counts
+
+jshell> counts.main(null);
+5
+Number of ones in binary representation :2
+
+
+Q.4) Write 2 functions => decimalToBinary() & binaryToDecimal() to convert a number from one number system to another. [BONUS]
+Code :
+ public class NumberConversion {
+   ...>
+   ...>         public static void main(String[] args) {
+   ...>                 Scanner sc = new Scanner(System.in);
+   ...>
+   ...>                 // Decimal to Binary
+   ...>                 System.out.print("Enter decimal number: ");
+   ...>                 int decimal = sc.nextInt();
+   ...>                 System.out.println("Binary: " + decimalToBinary(decimal));
+   ...>
+   ...>                 // Binary to Decimal
+   ...>                 System.out.print("Enter binary number: ");
+   ...>                 String binary = sc.next();
+   ...>                 System.out.println("Decimal: " + binaryToDecimal(binary));
+   ...>         }
+   ...>
+   ...>         // Function to convert decimal to binary
+   ...>         public static String decimalToBinary(int decimal) {
+   ...>                 StringBuilder binary = new StringBuilder();
+   ...>                 if (decimal == 0) return "0"; // Special case
+   ...>                 while (decimal > 0) {
+   ...>                         binary.insert(0, decimal % 2); // Add remainder at the front
+   ...>                         decimal = decimal / 2;         // Divide by 2
+   ...>                 }
+   ...>                 return binary.toString();
+   ...>         }
+   ...>
+   ...>         // Function to convert binary to decimal
+   ...>         public static int binaryToDecimal(String binary) {
+   ...>                 int decimal = 0;
+   ...>                 int length = binary.length();
+   ...>                 for (int i = 0; i < length; i++) {
+   ...>                         if (binary.charAt(length - 1 - i) == '1') { // Rightmost bit first
+   ...>                                 decimal += Math.pow(2, i);             // Add value to decimal
+   ...>                         }
+   ...>                 }
+   ...>                 return decimal;
+   ...>         }
+   ...> }
+|  created class NumberConversion
+
+jshell> NumberConversion.main(null);
+Enter decimal number: 12
+Binary: 1100
+Enter binary number: 1111
+Decimal: 15
+
+
